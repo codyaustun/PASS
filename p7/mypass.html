@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>PASS - Job Hunting Made Simple</title>
+<link href="images/favicon.ico" rel="shortcut icon"  />
+<link href="images/favicon.ico" rel="icon" type="image/x-icon" />
+
+<link rel="stylesheet" href="jquery-ui-1.8.7.custom/css/ui-lightness/jquery-ui-1.8.7.custom.css" />
+<link rel="stylesheet" href="styles/baseThin.css" />
+<link rel="stylesheet" href="styles/mypassM.css" />
+
+<script type="text/javascript" src="scripts/jquery-1.4.4.min.js"></script>
+<script type="text/javascript" src="jquery-ui-1.8.7.custom/js/jquery-ui-1.8.7.custom.min.js"></script>
+<script type="text/javascript" src="scripts/feedback.js"></script>
+<script type="text/javascript" src="scripts/growl.js"></script>
+<script type="text/javascript" src="scripts/main.js"></script>
+
+
+
+</head>
+
+<body>
+	<div id="growl">
+    </div>
+	<div id="feedback">
+    	<h3>Feedback</h3>
+    </div>
+	
+	<div id="topOuter">
+    	<!-- topInner Start -->
+    	<div id="topInner">
+        
+        	<!-- Header Start -->
+        	<div id="header">
+
+            </div>
+            
+            <!-- Header End -->
+            
+            
+            <!-- Navigation Start -->
+            <div id="nav">
+            
+            	<!-- Menu Start -->
+                <div id="links">
+                    <ul>
+                        <li><a href="#" class="nav-link">Home</a></li>
+                        <li><a href="#" class="nav-link">Pass Me(10)</a></li>
+                        <li><a href="#" class="nav-link">Job Tracking(3)</a></li>
+                        
+                      
+                    </ul>
+                </div>
+                <!-- Menu End -->
+              
+                
+                
+                <!-- Search form Start -->
+                	<form id="searchForm">
+                    	<div id="search">
+                            <input type="test" name="search" id="searchBox" placeholder="search"/>
+                            <input type="submit" value="" id="searchSubmit" />
+                        </div>
+                    </form>
+                <!-- Search form End -->
+                
+            
+            </div>
+            <!-- Navigation End -->
+            
+            
+        </div>
+        <!-- topInner End -->
+    </div>
+    
+    
+    
+    <div id="bottomOuter">
+    
+    	<!-- bottomInner Start -->
+    	<div id="bottomInner">
+        
+        	<!-- Content Start -->
+        	<div id="content">
+            	<div id="title">
+                	<input class="editForm title" type="text" id="title" placeholder="Untitled Resume" name="title"/>
+                </div>
+            
+            
+            	<!-- Contact Information Start -->
+                <div id="contact">
+                <h2>Contact:</h2>
+                
+                <form id="contactForm">
+                	<input class="editForm" type="text" id="street" placeholder="Street" />
+                    <input class="editForm" type="text" id="city"placeholder="City" />,
+                    <input class="editForm" type="text" id="state" placeholder="State" />
+                    <input class="editForm" type="text" id="zip" placeholder="Zip Code" />
+                    &#8226;
+                    <label for="phone">Phone:</label>
+                    <input class="editForm" type="text" id="phone" name="phone" placeholder="555-555-5555" />
+                    <label for="fax">Fax:</label>
+                    <input class="editForm" type="text" id="fax" name="fax" placeholder="555-555-5555" />
+                    <label for="email">Email:</label>
+                    <input class="editForm" type="email" id="email" name="email" placeholder="smith@example.com" />
+                </form>
+                </div>
+                <!-- Contact Information End -->
+        
+                <!-- Education Start -->
+                <div  id="education">
+                
+                	<!-- col1 Start -->
+                    <div class="col1">
+                
+                        <span class="sectionTitle">Education:</span>
+                        
+                        <!-- Storage Managment Controls Start -->
+                        <div class="manage">
+                        	<div class="storeButton">Storage</div>
+                            <div class="open connectEd">
+                            </div>
+                        </div>
+                        <!-- Storage Managment Controls End -->
+                        
+                    </div>
+                    <!-- col1 End -->
+                    
+                    <!-- sideRow Start -->
+                    <div class="sideRow connectEd">
+                    	
+                        
+                    	<div class="ed entry">
+                        
+                        	<div class="handle">
+                            	<div class="move">
+                                </div>
+                                <div class="cut">
+                                </div>
+                                <div class="close">
+                                </div>
+                            </div>
+                        
+                            <div class="col2">
+                                
+                                <div class="row1">
+                                    
+                                    <div class="school">
+                                        <span class="editable" data-field='school' data-type='bold'>
+                                            Massachusetts Institute of Technology (MIT)
+                                        </span>
+                                    </div>
+                                    
+                                    <div class="gpa">
+                                    	GPA:&nbsp;
+                                        <span class="editable" data-field='gpa'>
+                                            4.0
+                                        </span>
+                                        /4.0
+                                    </div>
+                                    
+                                </div>
+                                
+                                <div class="row2">
+                                    <span class="degree editable" data-field='degree'>
+                                        Candidate for Bachelor of Science in Electrical Engineering and Computer Science. 
+                                    </span>
+                                </div>
+                                
+                                <div class="row3">
+                                     
+                                    <p class="editable-area" data-field='classes'>
+                                        Single and Multivariable Calculus, Differential Equations, Mathematics for Computer Science, Physics I & II,   Introduction to Electrical Engineering and Computer Science I & II, and Engineering, Innovation, and Design
+                                    </p>
+                                </div>
+                            
+                                
+                            </div>
+                            
+                            <div class="col3">
+                                
+                                <div class="location">
+                                    <span class="editable" data-field='city'>
+                                        Cambridge
+                                    </span>,
+                                    <span class="editable" data-field='state'>
+                                    	MA
+                                    </span>
+                                </div>
+                                
+                                <div class="date">
+                                    (<span class="editable" data-field='gradDate'>
+                                        June 2013
+                                    </span>)
+                                </div>
+                                
+                                
+                            </div>
+                        </div> 
+                        
+                       <!-- Education Sample Start -->
+                        <div class="ed entry sample">
+                        	<div class="handle">
+                            	<div class="move">
+                                </div>
+                                <div class="cut">
+                                </div>
+                                <div class="close">
+                                </div>
+                            </div>
+                            <div class="col2">
+                                
+                                <div class="row1">
+                                    
+                                    <div class="school">
+                                        <span class="editable" data-field='school' data-type='bold'>
+                                            School (Example: Harvard University)
+                                        </span>
+                                    </div>
+                                    
+                                    <div class="gpa">
+                                    	 GPA:&nbsp;
+                                        <span class="editable" data-field='gpa'>
+                                        	4.0   
+                                        </span>
+                                        /4.0
+                                    </div>
+                                    
+                                </div>
+                                
+                                <div class="row2">
+                                    <span class="degree editable" data-field="degree">
+                                        Enter your Degree (Example: Candidate for Bachelor of Science in Computer Science.)
+                                    </span>
+                                </div>
+                                
+                                <div class="row3">
+                                     
+                                    <span class="editable-area" data-field="classes">
+                                        Enter your relevant classes here.
+                                    </span>
+                                </div>
+                            
+                                
+                            </div>
+                            
+                            <div class="col3">
+                                
+                                <div class="location">
+                                    <span class="editable" data-field="city">
+                                        City
+                                    </span>,
+                                    <span class="editable" data-field="state">
+                                    	State
+                                    </span>
+                                </div>
+                                
+                                <div class="date">
+                                    (<span class="editable" data-field="gradDate">
+                                        Graduation Date
+                                    </span>)
+                                </div>
+                                
+                                
+                            </div>
+                        </div> 
+                       <!-- Education  Sample End --->
+                       
+                       
+                        <!-- Education Controls Start -->
+                       <div id="ed-control" class="control">
+                            <div id="ed-show">
+                                Hide Example
+                            </div>
+                            <div id="ed-new">
+                                New
+                            </div>
+                       </div>
+                       <!-- Education Controls End -->
+                    </div> 
+                    <!-- sideRow End -->
+                    
+                    
+                       
+                </div>
+                <!-- education End -->
+                
+                <!-- experience Start -->
+                <div  id="experience">
+                
+                	<!-- col1 Start -->
+                	<div class="col1">
+                
+                        <span class="sectionTitle">Experience:</span>
+                        
+                        <!-- Storage Managment Controls Start -->
+                        <div class="manage">
+                        	<div class="storeButton">Storage</div>
+                            <div class="open connectEx">
+                            </div>
+                        </div>
+                        <!-- Storage Managment Controls End -->
+                        
+                    </div>
+                    <!-- col1 End -->
+                    
+                    <!-- sideRow Start -->
+                    <div class="sideRow connectEx">
+                    
+                    	<div class="ex entry">
+                        	<div class="handle">
+                            	<div class="move">
+                                </div>
+                                <div class="cut">
+                                </div>
+                                <div class="close">
+                                </div>
+                            </div>
+                            <div class="col2">
+                                
+                                <div class="row1">
+                                    
+                                    <div class="organization">
+                                        <span class="editable" data-field="organization" data-type="bold">
+                                            MIT
+                                        </span>
+                                        &nbsp;
+                                    </div>
+                                    
+                                    <div class="project">
+                                        <span class="editable" data-field="project">
+                                            Electrical Engineering and Computer Science Department
+                                        </span>
+                                    </div>
+                                    
+                                </div>
+                                
+                                <div class="row2">
+                                    <span class="position editable" data-field="position" data-type="italic">
+                                        Founder 
+                                    </span>
+                                </div>
+                                
+                                <div class="row3">
+                                     
+                                    <span class="editable-area" data-field="description">
+                                        Spearheading an alumni career advising program for the EECS department, which would provide alumni mentors and mock technical interviews for current undergraduate students.
+                                    </span>
+                                </div>
+                            
+                                
+                            </div>
+                            
+                            <div class="col3">
+                                
+                                <div class="location">
+                                    <span class="editable" data-field="city">
+                                        Cambridge
+                                    </span>,
+                                    <span class="editable" data-field="state">
+                                    	MA
+                                    </span>
+                                </div>
+                                
+                                <div class="date">
+                                    (<span class="editable" data-field="start">
+                                        Dec. 2010
+                                    </span>-
+                                    <span class="editable" data-field="endDate">
+                                    	Present
+                                    </span>)
+                                </div>
+                                
+                                
+                            </div>
+                        </div>
+                       
+                        
+                        <!-- Experience Sample Start -->
+                        <div class="ex entry sample">
+                        	<div class="handle">
+                            	<div class="move">
+                                </div>
+                                <div class="cut">
+                                </div>
+                                <div class="close">
+                                </div>
+                            </div>
+                            <div class="col2">
+                                <div class="row1">
+                                    
+                                    <div class="organization">
+                                        <span class="editable" data-field="organization" data-type="bold">
+                                            MIT
+                                        </span>
+                                        &nbsp;
+                                    </div>
+                                    
+                                    <div class="project">
+                                     
+                                        <span class="editable" data-field="project">
+                                            Electrical Engineering and Computer Science Department
+                                        </span>
+                                    </div>
+                                    
+                                </div>
+                                
+                                <div class="row2">
+                                    <span class="position editable" data-field="position" data-type="italic">
+                                        Founder 
+                                    </span>
+                                </div>
+                                
+                                <div class="row3">
+                                     
+                                    <span class="editable-area" data-field="description">
+                                        Spearheading an alumni career advising program for the EECS department, which would provide alumni mentors and mock technical interviews for current undergraduate students.
+                                    </span>
+                                </div>
+                            
+                                
+                            </div>
+                            
+                            <div class="col3">
+                                
+                                <div class="location">
+                                    <span class="editable" data-field="start">
+                                        Cambridge
+                                    </span>,
+                                    <span class="editable" data-field="end">
+                                    	MA
+                                    </span>
+                                </div>
+                                
+                                <div class="date">
+                                    (<span class="editable">
+                                        Dec. 2010
+                                    </span>-
+                                    <span class="editable">
+                                    Present
+                                    </span>)
+                                </div>
+                                
+                                
+                            </div>
+                        </div>
+                        <!-- Experience Sample End -->
+                        
+                        <!-- Experience Controls End -->
+                       <div id="ex-control" class="control">
+                            <div id="ex-show">
+                                Hide Example
+                            </div>
+                            <div id="ex-new">
+                                New
+                            </div>
+                       </div>
+                       <!-- Experience Controls End -->
+                        
+                    </div>
+                    <!-- sideRow End -->
+                    
+                    
+                
+                </div>
+                <!-- experience End -->
+                
+                <!-- activities Start -->
+                <div id="activities">
+                
+                	<!-- col1 Start -->
+                	<div class="col1">
+                		<span class="sectionTitle">Activities:</span>
+                        <!-- Storage Managment Controls Start -->
+                        <div class="manage">
+                        	<div class="storeButton">Storage</div>
+                            <div class="open connectAct">
+                            </div>
+                        </div>
+                        <!-- Storage Managment Controls End -->
+                    </div>
+                    <!-- col1 End -->
+                    
+                    <!-- sideRow Start -->
+                    <div class="sideRow connectAct">
+                    
+                    	<div class="act entry">
+                        	<div class="handle">
+                            	<div class="move">
+                                </div>
+                                <div class="cut">
+                                </div>
+                                <div class="close">
+                                </div>
+                            </div>
+                            <div class="col2">
+                                
+                                <div class="row1">
+                                    
+                                    <div class="organization">
+                                        <span class="editable" data-field="organization" data-type="bold">
+                                            MIT
+                                        </span>
+                                    </div>
+                                    
+                                </div>
+                                
+                                <div class="row2">
+                                    <span class="position editable" data-field="position" data-type="italic">
+                                        Member of the Institute Committee for Student Life
+                                    </span>
+                                </div>
+                                
+                                <div class="row3">
+                                     
+                                    <span class="editable-area" data-field="description">
+                                        Represent the interests of MIT undergraduate student body and formulate a plan of action, to improve the overall quality of student life.
+                                    </span>
+                                </div>
+                            
+                                
+                            </div>
+                            
+                            <div class="col3">
+                                
+                                <div class="location">
+                                    <span class="editable" data-field="city">
+                                        Cambridge
+                                    </span>,
+                                    <span class="editable" data-field="state">
+                                    	MA
+                                    </span>
+                                </div>
+                                
+                                <div class="date">
+                                    (<span class="editable" data-field="start">
+                                        May 2010
+                                    </span>-
+                                    <span class="editable" data-field="end">
+                                    	Present
+                                    </span>)
+                                </div>
+                                
+                                
+                            </div>
+                        </div>
+                        
+                        <!-- Activity Sample Start -->
+                        <div class="act entry sample">
+                        	<div class="handle">
+                            	<div class="move">
+                                </div>
+                                <div class="cut">
+                                </div>
+                                <div class="close">
+                                </div>
+                            </div>
+                            <div class="col2">
+                                
+                                <div class="row1">
+                                    
+                                    <div class="organization">
+                                        <span class="editable" data-field="organization" data-type="bold">
+                                            MIT
+                                        </span>
+                                    </div>
+                                    
+                                </div>
+                                
+                                <div class="row2">
+                                    <span class="position editable" data-field="position" data-type="italic">
+                                        Member of the Institute Committee for Student Life
+                                    </span>
+                                </div>
+                                
+                                <div class="row3">
+                                     
+                                    <span class="editable-area" data-field="description">
+                                        Represent the interests of MIT undergraduate student body and formulate a plan of action, to improve the overall quality of student life.
+                                    </span>
+                                </div>
+                            
+                                
+                            </div>
+                            
+                            <div class="col3">
+                                
+                                <div class="location">
+                                    <span class="editable" data-field="city">
+                                        Cambridge
+                                    </span>,
+                                    <span class="editable" data-field="state">
+                                    	MA
+                                    </span>
+                                </div>
+                                
+                                <div class="date">
+                                    (<span class="editable" data-field="start">
+                                        May 2010
+                                    </span>-
+                                    <span class="editable" data-field="end">
+                                    	Present
+                                    </span>)
+                                </div>
+                                
+                                
+                            </div>
+                        </div>
+                        <!-- Activity Sample End -->
+                        
+                        <!-- Activities Controls End -->
+                       <div id="act-control" class="control">
+                            <div id="act-show">
+                                Hide Example
+                            </div>
+                            <div id="act-new">
+                                New
+                            </div>
+                       </div>
+                       <!-- Activities Controls End -->
+                      
+                        
+                    </div>
+                    <!--- sideRow End -->
+                    
+                    
+                
+                </div>
+                <!-- activities End -->
+                
+                <!-- skills Start -->
+                <div id="skills">
+                	<!-- col1 Start -->
+                	<div class="col1">
+                    	<span class="sectionTitle">
+                        	Skills:
+                        </span>
+                        
+                        <!-- Storage Managment Controls Start -->
+                        <div class="manage">
+                        	<div class="storeButton">Storage</div>
+                            <div class="open connectSk">
+                            </div>
+                        </div>
+                        <!-- Storage Managment Controls End -->
+                        
+                    </div>
+                    <!-- col1 End -->
+                    
+                    <!-- sideRow Start -->
+                    <div class="sideRow connectSk">
+                    
+                    	<div class="sk entry sample">
+                        		<div class="smallHandle">
+                                    <div class="move">
+                                    </div>
+                                    <div class="cut">
+                                    </div>
+                                    <div class="close">
+                                    </div>
+                                </div>
+                                
+                            <input class="editForm editableForm skill" name="skill" placeholder="Enter skill" />
+                                    
+                          
+                            
+                        </div>
+                    	
+                    </div>	
+                    <!-- sideRow end -->
+                </div>
+                <!-- skills End -->
+                
+                
+                <!-- interests Start-->
+                <div id="interests">
+                	<!-- col1 Start -->
+                	<div class="col1">
+                    	<span class="sectionTitle">
+                        	Interests:
+                        </span>
+                        
+                        <!-- Storage Managment Controls Start -->
+                        <div class="manage">
+                        	<div class="storeButton">Storage</div>
+                            <div class="open connectInt">
+                            </div>
+                        </div>
+                        <!-- Storage Managment Controls End -->
+                        
+                    </div>
+                    <!-- col1 end -->
+                    
+                    <!-- sideRow Start -->
+                     <div class="sideRow connectInt">
+                     
+                     	<div class="inter entry sample">
+                        		<div class="smallHandle">
+                                    <div class="move">
+                                    </div>
+                                    <div class="cut">
+                                    </div>
+                                    <div class="close">
+                                    </div>
+                                </div>
+                                
+                            <input class="editForm editableForm interest" name="interest" placeholder="Enter interest" />
+                                    
+                          
+                            
+                        </div>
+                     
+                        
+                     </div>
+                     <!-- sideRow End -->
+                </div>
+                <!-- interest End -->
+                
+            </div>
+            <!-- Content End -->
+            
+            
+        </div>
+        
+        <div id="footer">
+            	About Us | Feedback | History
+           	</div>
+        
+    </div>
+</body>
+</html>

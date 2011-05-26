@@ -1,0 +1,524 @@
+<?php
+require_once 'info.php';
+$db_server=mysql_connect($db_hostname,$db_username,$db_password);
+if(!$db_server) die("Unable to Connect to MySQL: ". mysql_error());
+mysql_select_db($db_database) or die("Unable to select database: " .mysql_error());
+
+// start session check to see if logged on
+session_start();
+if (!isset($_SESSION['user_id']))
+{
+header("Location: home.php");
+}
+else
+{
+  $id = $_SESSION['user_id'];
+  $r_id = $_GET['rid'];
+  $uid = $_GET['uid'];
+  if ($id!=$uid) header("Location: dashboard.php");
+  if ($r_id==none){
+        $new_resQ="INSERT INTO `kwadwo+IAP`.`resume` (`id`, `user_id`, `title`, `street`, `city`, `state`, `zip`, `country`, `phone`, `fax`, `email`, `created_on`, `updated_on`) VALUES (NULL, $id, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, CURRENT_TIMESTAMP, NULL)";
+        mysql_query($new_resQ);
+        $resume_id = mysql_insert_id();
+        $url = "mypass.php?uid=$id&rid=$resume_id";
+        header("Location:".$url);
+  }
+  else {
+
+  $query = 'SELECT * FROM resume WHERE user_id='.$id.' and id='.$r_id;
+
+  $resumes = mysql_query($query);
+  $resume_data = mysql_fetch_row($resumes);
+  $resume_id=$resume_data[0];
+  }
+}
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>PASS - Job Hunting Made Simple</title>
+<link href="images/favicon.ico" rel="shortcut icon"  />
+<link href="images/favicon.ico" rel="icon" type="image/x-icon" />
+
+<link rel="stylesheet" href="jquery-ui-1.8.7.custom/css/ui-lightness/jquery-ui-1.8.7.custom.css" />
+<link rel="stylesheet" href="styles/baseThin.css" />
+<link rel="stylesheet" href="styles/mypassMV.css" />
+
+<script type="text/javascript" src="scripts/jquery-1.4.4.min.js"></script>
+<script type="text/javascript" src="jquery-ui-1.8.7.custom/js/jquery-ui-1.8.7.custom.min.js"></script>
+<script type="text/javascript" src="scripts/feedback.js"></script>
+<script type="text/javascript" src="scripts/growl.js"></script>
+<script type="text/javascript" src="scripts/mainV.js"></script>
+
+
+
+</head>
+
+<body>
+	<div id="growl">
+    </div>
+	<div id="feedback">
+    	<h3>Feedback</h3>
+        <!-- use jQuery UI Dialog box -->
+    </div>
+    
+    
+	
+	<div id="topOuter">
+    	<!-- topInner Start -->
+    	<div id="topInner">
+        
+        	<!-- Header Start -->
+        	<div id="header">
+            
+            </div>
+            
+            <!-- Header End -->
+            
+            
+            <!-- Navigation Start -->
+            <div id="nav">
+            
+            	<!-- Menu Start -->
+                <div id="links">
+                    <ul>
+                        <li><a href="dashboard.php" class="nav-link">Home</a></li>
+                        <li><a href="#" class="nav-link">Pass Me(10)</a></li>
+                        <li><a href="#" class="nav-link">Job Tracking(3)</a></li>
+                        
+                      
+                    </ul>
+                </div>
+                <!-- Menu End -->
+              
+                
+                
+                <!-- Search form Start -->
+                	<form id="searchForm">
+                    	<div id="search">
+                            <input type="test" name="search" id="searchBox" placeholder="search"/>
+                            <input type="submit" value="" id="searchSubmit" />
+                        </div>
+                    </form>
+                <!-- Search form End -->
+                
+                <!-- Account info Start -->
+                
+                	<div id="account">
+                    	<div id="accHead">Account</div>
+                        <div id="accImage">
+                        </div>
+                        <div id="moreAcc">
+                        	<ul>
+                            	<li><a href="logout.php">Logout</a></li>
+                                <li><a href="#">Edit Profile</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                
+                <!-- Account info End -->
+            
+            </div>
+            <!-- Navigation End -->
+            
+            
+        </div>
+        <!-- topInner End -->
+    </div>
+    
+    
+    
+    <div id="bottomOuter">
+    
+    	<!-- bottomInner Start -->
+    	<div id="bottomInner">
+        
+        	<!-- Content Start -->
+        	<div id="content">
+            	
+            	<div id="title" class="entry" data-t="resume" data-i="<?php echo $r_id ?>">
+                	<input class="editForm title" type="text" id="title" placeholder="Untitled Resume" name="title" value="<?php echo $resume_data[2];?>"/>
+                </div>
+            
+            
+            	<!-- Contact Information Start -->
+                <div id="contact" class="entry" data-t="resume" data-i="<?php echo $r_id ?>">
+                <h2>Contact:</h2>
+                
+                <center>
+                
+                	<span><?php echo $resume_data[3];?></span>
+                    &#8226;
+                    <span><?php echo $resume_data[4];?></span>,
+                    <span><?php echo $resume_data[5];?></span>
+                    <span><?php echo $resume_data[6];?></span>
+                    &#8226;
+                    Phone:
+                    <span><?php echo $resume_data[8];?></span>
+                    &#8226;
+                    Fax:
+                    <span><?php echo $resume_data[9];?></span>
+                    &#8226;
+                    Email:
+                    <span><?php echo $resume_data[10];?></span>
+                </center>
+                </div>
+                <!-- Contact Information End -->
+        
+                <!-- Education Start -->
+                <div  id="education">
+                
+                	<!-- col1 Start -->
+                    <div class="col1">
+                
+                        <span class="sectionTitle">Education:</span>
+                        
+                    </div>
+                    <!-- col1 End -->
+                    
+                    <!-- sideRow Start -->
+                    <div class="sideRow connectEd">
+                    <?php 
+						$edQ= mysql_query('SELECT * FROM education WHERE user_id ='.$id.' and resume_id='.$resume_id.' ORDER BY sequence');
+						
+							while($ed = mysql_fetch_object($edQ)){
+							echo '
+								<div class="ed entry" data-t="education" data-i="'.$ed->id.'">
+								
+								
+									<div class="col2">
+										
+										<div class="row1">
+											
+											<div class="school">
+												<span class="editable" data-field="school" data-type="bold">'
+													.$ed->school.
+												'</span>
+											</div>
+											
+											<div class="gpa">
+												GPA:&nbsp;
+												<span class="editable" data-field="gpa">'
+													.$ed->gpa.
+												'</span>
+												/4.0
+											</div>
+											
+										</div>
+										
+										<div class="row2">
+											<span class="degree editable" data-field="degree">'
+												.$ed->degree.
+											'</span>
+										</div>
+										
+										<div class="row3">
+											 
+											<p class="editable-area" data-field="classes">'
+												.$ed->classes.
+											'</p>
+										</div>
+									
+										
+									</div>
+									
+									<div class="col3">
+										
+										<div class="location">
+											<span class="editable" data-field="city">'
+												.$ed->city.
+											'</span>,
+											<span class="editable" data-field="state">'
+												.$ed->state.
+											'</span>
+										</div>
+										
+										<div class="date">
+											(<span class="editable" data-field="grad_date" data-type="dateC">'
+												.$ed->grad_date.	
+											'</span>)
+										</div>
+										
+										
+									</div>
+								</div> 
+                       			';
+							
+						}
+						
+					?>
+                    
+                
+                       
+                </div>
+                <!-- education End -->
+                
+                <!-- experience Start -->
+                <div  id="experience">
+                
+                	<!-- col1 Start -->
+                	<div class="col1">
+                
+                        <span class="sectionTitle">Experience:</span>
+                        
+                    </div>
+                    <!-- col1 End -->
+                    
+                    <!-- sideRow Start -->
+                    <div class="sideRow connectEx">
+                     <?php 
+					$exQ= mysql_query('SELECT * FROM experience WHERE user_id='.$id.' and resume_id='.$resume_id.' ORDER BY sequence');
+					
+					
+						while($ex = mysql_fetch_object($exQ)){
+							echo '
+							<div class="ex entry" data-t="experience" data-i="'.$ex->id.'">
+								
+								<div class="col2">
+									
+									<div class="row1">
+										
+										<div class="organization">
+											<span class="editable" data-field="organization" data-type="bold">'
+												.$ex->organization.
+											'</span>
+											&nbsp;
+										</div>
+										
+										<div class="project">
+											<span class="editable" data-field="project">'
+												.$ex->project.
+											'</span>
+										</div>
+										
+									</div>
+									
+									<div class="row2">
+										<span class="position editable" data-field="position" data-type="italic">'
+											.$ex->position.
+										'</span>
+									</div>
+									
+									<div class="row3">
+										 
+										<span class="editable-area" data-field="description">'
+											.$ex->description.
+										'</span>
+									</div>
+								
+									
+								</div>
+								
+								<div class="col3">
+									
+									<div class="location">
+										<span class="editable" data-field="city">'
+											.$ex->city.
+										'</span>,
+										<span class="editable" data-field="state">'
+											.$ex->state.
+										'</span>
+									</div>
+									
+									<div class="date">
+										(<span class="editable" data-field="start" data-type="dateC">'
+											.$ex->start.
+										'</span>-
+										<span class="editable" data-field="end" data-type="dateC">'
+											
+											.$ex->end.
+											
+											
+										'</span>)
+									</div>
+									
+									
+								</div>
+							</div>';
+						
+					}
+					?>
+						   
+                    
+                        
+                    </div>
+                    <!-- sideRow End -->
+                    
+                    
+                
+                </div>
+                <!-- experience End -->
+                
+                <!-- activities Start -->
+                <div id="activities">
+                
+                	<!-- col1 Start -->
+                	<div class="col1">
+                		<span class="sectionTitle">Activities:</span>
+                        
+                    </div>
+                    <!-- col1 End -->
+                    
+                    <!-- sideRow Start -->
+                    <div class="sideRow connectAct">
+                    
+					<?php
+                    $actQ = mysql_query('SELECT * FROM activities WHERE user_id='.$id.' and resume_id='.$resume_id.' ORDER BY sequence');
+                    
+                    
+                        while($act=mysql_fetch_object($actQ)){
+                            echo '
+                                        
+                                            <div class="act entry" data-t="activities" data-i="'.$act->id.'">
+                                                <div class="col2">
+                                                    
+                                                    <div class="row1">
+                                                        
+                                                        <div class="organization">
+                                                            <span class="editable" data-field="organization" data-type="bold">'
+                                                                .$act->project.
+                                                            '</span>
+                                                        </div>
+                                                        
+                                                    </div>
+                                                    
+                                                    <div class="row2">
+                                                        <span class="position editable" data-field="position" data-type="italic">'
+                                                            .$act->position.
+                                                        '</span>
+                                                    </div>
+                                                    
+                                                    <div class="row3">
+                                                         
+                                                        <span class="editable-area" data-field="description">'
+                                                            .$act->description.
+                                                        '</span>
+                                                    </div>
+                                                
+                                                    
+                                                </div>
+                                                
+                                                <div class="col3">
+                                                    
+                                                    <div class="location">
+                                                        <span class="editable" data-field="city">'
+                                                            .$act->city.
+                                                        
+                                                        '</span>,
+                                                        <span class="editable" data-field="state">'
+                                                            .$act->state.
+                                                        '</span>
+                                                    </div>
+                                                    
+                                                    <div class="date">
+                                                        (<span class="editable" data-field="start" data-type="dateC">'
+                                                            .$act->start.
+                                                        '</span>-
+                                                        <span class="editable" data-field="end" data-type="dateC">'
+                                                            .$act->end.
+                                                        '</span>)
+                                                    </div>
+                                                    
+                                                    
+                                                </div>
+                                            </div>
+                                            ';
+                        
+                    }
+                    ?>                        
+                     
+                    </div>
+                    <!--- sideRow End -->
+                    
+                    
+                
+                </div>
+                <!-- activities End -->
+                
+                <!-- skills Start -->
+                <div id="skills">
+                	<!-- col1 Start -->
+                	<div class="col1">
+                    	<span class="sectionTitle">
+                        	Skills:
+                        </span>
+                        
+                    </div>
+                    <!-- col1 End -->
+                    
+                    <!-- sideRow Start -->
+                    <div class="sideRow connectSk" >
+                    <?php
+                    $skQ = mysql_query('SELECT * FROM skills WHERE user_id='.$id.' and resume_id='.$resume_id.' ORDER BY sequence');
+                  
+                        while($sk=mysql_fetch_object($skQ)){
+                            echo '
+						<div class="inter entry" data-t="skills" data-i="'.$sk->id.'">
+                        		
+                                
+                            <span>'.$sk->skill.'</span>
+                                    
+                          
+                            
+                        </div>';
+						
+					}
+					?>
+                    
+                    </div>	
+                    <!-- sideRow end -->
+                </div>
+                <!-- skills End -->
+                
+                
+                <!-- interests Start-->
+                <div id="interests">
+                	<!-- col1 Start -->
+                	<div class="col1">
+                    	<span class="sectionTitle">
+                        	Interests:
+                        </span>
+                        
+                    </div>
+                    <!-- col1 end -->
+                    
+                    <!-- sideRow Start -->
+                     <div class="sideRow connectInt">
+                     <?php
+                    $intQ = mysql_query('SELECT * FROM interests WHERE user_id='.$id.' and resume_id='.$resume_id.' ORDER BY sequence');
+                    
+                        while($int=mysql_fetch_object($intQ)){
+                            echo '
+						<div class="inter entry" data-t="interests" data-i="'.$int->id.'">
+                        		
+                                
+                            <span>'.$int->interest.'</span>
+                                    
+                          
+                            
+                        </div>';
+						
+					}
+					?>
+                    
+                     </div>
+                     <!-- sideRow End -->
+                </div>
+                <!-- interest End -->
+                
+            </div>
+            <!-- Content End -->
+            
+            
+        </div>
+        
+        </div>
+        <div id="footer">
+            	About Us | Feedback | History
+           	</div>
+        
+    </div>
+</body>
+</html>

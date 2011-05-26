@@ -1,0 +1,86 @@
+@charset "utf-8";
+/* CSS Document 
+   Made by Nahom Workie
+   Edited by Cody Coleman
+   IAP 2011
+   for 6.470
+*/
+
+#main_title{
+	color:rgba(183, 92, 61, 0.746094);
+}
+
+#company_pic{
+	height:auto;
+	float:left;
+	margin-left: 25px;
+}
+#pic{
+	border: solid 1px rgba(183, 92, 61, 1);
+	height:225px;
+	width:400px;
+	background-image:inherit
+}
+#comp_picture{
+	width:400px;
+	margin-bottom: 25px;
+	
+}
+
+#describ{
+	margin-left:525px;
+	position: relative;
+	top: 25px;
+}
+
+.fieldLabel{
+	font-size: 18px;
+	text-align:right;	
+}
+
+.fieldBox{
+	height: 27px;
+	width: 200px;
+}
+	
+
+#describtion{
+	clear: both;
+	overflow: hidden;
+	
+}
+
+#create_comp{
+	position: relative;
+	left:650px;
+	width:150px;
+	height:50px;
+	color:white;
+	background:rgba(183, 92, 61, .75);
+	font-size:16px;
+	
+}
+
+.editableAreaForm{
+	width: 90%;
+	margin-left: 5%;
+	margin-right: 5%;
+	text-align: left;
+	min-height: 20px;
+}
+
+.sideRow{
+	padding-bottom: 10px;
+	text-align: left;	
+}
+
+.sectionTitle h2{
+	padding: 0px;
+	margin: 0px;
+	font-size: 24px;
+	color:  rgba(183, 92, 61, 1);	
+	font-weight: 100;
+	padding-bottom: 10px; 
+}
+
+

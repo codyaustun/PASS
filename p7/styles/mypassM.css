@@ -1,0 +1,566 @@
+@charset "UTF-8";
+/* CSS Document 
+   Made by Cody Coleman
+   IAP 2011
+   for 6.470
+*/
+
+#delResume{
+	position: absolute;
+	text-align: right;
+	top: 5px;
+	right: 5px;
+	width: 200px;
+    height: 16px;
+	margin-right: 4px;
+	cursor: pointer;
+	padding-bottom: 4px;
+	background-position: -80px -128px;
+	color: rgba(183, 92, 61, 1);
+}
+
+#delResume:hover{
+	background-position: -96px -128px;
+}
+
+/*
+#delDel{
+	position: absolute;
+	opacity: 0;
+}
+*/
+
+#delete{
+	text-decoration: none;	
+}
+
+#delX{
+	position: relative;	
+}
+
+input{
+	font-size: 14px;
+	padding: 0px;
+	margin: 0px;
+}
+
+.adjust{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;	
+}
+
+#education, #experience, #activities, #skills, #interests{
+	position: relative;
+	width: 950px;
+	margin: auto;
+	clear: both;
+	padding-bottom: 25px;
+	overflow: hidden;
+	height:auto;
+}
+
+
+
+.col1{
+	float: left;
+	width: 125px;
+	/* border: solid 1px #000000; */
+	margin-right: 10px;
+	font-size: 20px; 
+	overflow: hidden;
+	cursor: pointer;
+	color: rgba(183, 92, 61, 1);
+}
+
+/* Storare CSS STart */
+
+.open{
+	max-height: 150px;
+	
+	
+	
+}
+
+.storeButton{
+	text-align: center;
+	font-size: 14px;
+	padding-bottom: 5px;
+}
+
+.manage{
+	margin-top: 10px;
+}
+
+.openScroll{
+	overflow: scroll;
+	overflow-x: hidden;
+
+}
+
+.storage{
+	/*width: 600px;*/
+	width: 100%;
+	height: 27px;
+	background-color: #cbddf4;
+	overflow: hidden;
+	
+}
+
+.storage input{
+	font-size: 10px;
+	color: rgba(183, 92, 61, 1);
+}
+
+.mywrap{
+	position: relative;
+	width: 600px;
+	left: 20px;
+	top: 5px;
+	font-size: 10px;
+	
+}
+
+
+
+.mywrap .handle{
+	position: absolute;
+	top: -1px;
+	left: -15px;
+}
+
+.myClose{
+	
+}
+
+/* Storage CSS END */
+
+.col2{
+	float: left;
+	
+	width: 600px;
+	
+}
+
+.col3{
+	margin-left: 10px;
+	float: left;
+	width: 175px;
+	
+	text-align: right;
+		
+}
+
+.row1, .row2, .row3, .location, .date{
+	width: 100%;
+	padding: 0px;
+	margin: 0px;
+	height: 20px;
+	overflow: hidden; /* 27px; originally */
+	 /* 18px; originally */
+}
+
+.row2{
+	clear: both;	
+}
+
+.row3{
+	
+	height: auto;
+	clear:both;
+	
+}
+
+.row3 p{
+	margin: 0px;
+	padding: 0px;
+}
+
+.hideMes{
+	padding: 0px;
+	margin: 0px;
+	margin-left: 145;
+	overflow: hidden;
+	color: #696969;
+	font-size: 18px;
+}
+
+.sideRow{
+	font-size: 14px;
+	padding: 0px;
+	margin: 0px;
+	margin-left: 145;
+	overflow: hidden;
+}
+
+
+.location{
+	width: 100%;
+}
+
+.date{
+	width: 100%;
+}
+
+
+.school{
+	float: left;
+	width: 450px;
+	font-weight:bold;
+	overflow: hidden;
+}
+
+.gpa{
+	margin-left: 500px;
+	width: 100px;
+}
+
+.position{
+	font-style:italic;
+}
+
+.organization{
+	float: left;
+	font-weight:bold;
+}
+
+.project{
+	float: left;
+}
+
+.handle{
+	float: left;
+	position: relative;
+	padding-top: 1px;
+    height: 16px;
+    width: 16px;
+	
+	cursor: pointer;
+}
+.move, .close, .cut, .upArrow, downArrow{
+	
+	
+	background-image: url(../jquery-ui-1.8.7.custom/css/ui-lightness/images/ui-icons_ef8c08_256x240.png);
+    height: 16px;
+    width: 16px;
+	margin-right: 4px;
+	cursor: pointer;
+	padding-bottom: 4px;
+	
+}
+
+.move{
+	background-position: 0 -80px;
+}
+
+.cut{
+	background-position: -144px -128px;
+}
+
+.close{
+	
+	background-position: -80px -128px;
+}
+
+.close:hover{
+	background-position: -96px -128px;
+}
+
+.ed{
+	padding: 0px;
+	margin: 0px;
+	overflow: hidden;
+	padding-bottom: 25px;
+	
+	
+}
+
+.skill, .interest{
+	float: left;
+	width: 75px;
+	height: 17px;
+	padding: 0px;
+	margin: 0px;
+}
+
+.interest{
+	width: 85px;	
+}
+
+.sk, .inter{
+	float: left;
+	width: auto;
+	overflow: hidden;
+	padding-right: 10px;
+	height: 17px;
+}
+
+.smallHandle{
+	position: relative;
+	width: 48px;
+	overflow: hidden;
+	float: left;
+	height: 17px;
+	padding: 0px;
+	margin: 0px;
+}
+
+.sk .move, .sk cut, .sk close, .inter .move, .inter cut, .inter close{
+	float: left;
+	overflow: hidden;	
+	position: absolute;
+}
+
+.sk .cut, .inter .cut{
+	position: absolute;
+	left: 16px;	
+}
+
+.sk .close, .inter .close{
+	position: absolute;
+	left: 32px;	
+}
+
+.sample .smallHandle{
+	display: none;
+	position: absolute;
+}
+
+
+.sample{
+	padding: 0px;
+	margin: 0px;
+	padding-bottom: 25px;
+	color:#696969;	
+}
+
+.sample input{
+	color: #696969;	
+}
+
+.sample .handle .move{
+	display: none;
+}
+
+.sample .handle .close{
+	display: none;
+}
+
+.sample .handle .cut{
+	display: none;
+}
+
+#ed-control{
+	clear: both;
+	overflow: hidden;
+
+}
+
+#ed-show{
+	cursor: pointer;
+	width: 115px;
+	float: left;
+	background-color:rgba(183, 92, 61, 1);
+	color: #FFF;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	
+	margin-right: 25px;
+	text-align:center;
+	
+}
+
+#ed-new{
+	cursor: pointer;
+	width: 50px;
+	float: left;
+	background-color:rgba(183, 92, 61, 1);
+	color: #FFF;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	text-align:center;
+	
+}
+
+.ex{
+	padding: 0px;
+	margin: 0px;
+	overflow: hidden;
+	padding-bottom: 25px;
+	
+}
+
+.ex-sample{
+	padding: 0px;
+	margin: 0px;
+	overflow: hidden;
+	padding-bottom: 25px;
+	color:#696969;
+	
+}
+
+#ex-control{
+	clear: both;
+	overflow: hidden;
+	
+
+}
+
+#ex-show{
+	cursor: pointer;
+	width: 115px;
+	float: left;
+	background-color:rgba(183, 92, 61, 1);
+	color: #FFF;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	
+	margin-right: 25px;
+	text-align:center;
+	
+}
+
+#ex-new{
+	cursor: pointer;
+	width: 50px;
+	float: left;
+	background-color:rgba(183, 92, 61, 1);
+	color: #FFF;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	text-align:center;
+}
+
+.act{
+	padding: 0px;
+	margin: 0px;
+	overflow: hidden;
+	padding-bottom: 25px;
+	
+}
+
+.act-sample{
+	padding: 0px;
+	margin: 0px;
+	overflow: hidden;
+	padding-bottom: 25px;
+	color:#696969;
+	
+}
+
+#act-control{
+	clear: both;
+	overflow: hidden;
+	
+}
+
+#act-show{
+	cursor: pointer;
+	width: 115px;
+	float: left;
+	background-color:rgba(183, 92, 61, 1);
+	color: #FFF;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	
+	margin-right: 25px;
+	text-align:center;
+	
+}
+
+#act-new{
+	cursor: pointer;
+	width: 50px;
+	float: left;
+	background-color:rgba(183, 92, 61, 1);
+	color: #FFF;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	text-align:center;
+}
+
+.emptySideRow{
+	/* background-color:rgba(183, 92, 61, 1); */
+	height: 50px;
+	width: 100%;
+	text-align: center;
+	color: #696969;
+}
+
+
+/* Contact Form Start */
+
+div#contact{
+	padding-bottom: 25px;	
+}
+
+#contactForm{
+	margin:auto;
+	width: 100%;
+	text-align: center;
+}
+
+div#contact h2{
+	font-size: 20px;
+	padding: 0px;
+	margin: 0px;
+	color: rgba(183, 92, 61, 1);
+	font-weight:100;
+}
+
+
+
+div#contact input{
+	border: none;
+	height: 20px;
+	font-size: 15px;
+}
+
+input#street{
+	width: 50px;
+}
+
+input#city{
+	width: 30px;
+}
+
+input#state{
+	width: 35px;
+}
+
+input#zip{
+	width: 65px;
+}
+
+input#phone{
+	width: 100px;
+}
+
+input#fax{
+	width: 100px;
+}
+input#email{
+	width: 145px;
+}
+
+div#title{
+	text-align: center;	
+}
+
+div#title input{
+	border: none;
+	height: 25px;
+	width: 150px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 20px;
+	
+	color: rgba(183, 92, 61, 1);
+}
+
+.title{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 20px;
+	
+}
+
+
+/* Contact Form End */

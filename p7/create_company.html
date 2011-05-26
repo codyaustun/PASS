@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>PASS - Job Hunting Made Simple</title>
+<link href="images/favicon.ico" rel="shortcut icon"  />
+<link href="images/favicon.ico" rel="icon" type="image/x-icon" />
+
+
+<link rel="stylesheet" href="jquery-ui-1.8.7.custom/css/ui-lightness/jquery-ui-1.8.7.custom.css" />
+<link rel="stylesheet" href="styles/baseThin.css" />
+<link rel="stylesheet" href="styles/create_company.css" />
+
+<script type="text/javascript" src="scripts/jquery-1.4.4.min.js"></script>
+<script type="text/javascript" src="jquery-ui-1.8.7.custom/js/jquery-ui-1.8.7.custom.min.js"></script>
+<script type="text/javascript" src="scripts/feedback.js"></script>
+<script type="text/javascript" src="scripts/create_company.js"></script>
+
+</head>
+
+<body>
+	<div id="growl">
+    </div>
+	<div id="feedback">
+    	<h3>Feedback</h3>
+        <!-- use jQuery UI Dialog box -->
+    </div>
+	
+	<div id="topOuter">
+    	<!-- topInner Start -->
+    	<div id="topInner">
+        
+        	<!-- Header Start -->
+        	<div id="header">
+                
+            </div>
+            
+            <!-- Header End -->
+            
+            
+            <!-- Navigation Start -->
+            <div id="nav">
+            
+            	<!-- Menu Start -->
+                <div id="links">
+                    <ul>
+                        <li><a href="#" class="nav-link">Home</a></li>
+                        <li><a href="#" class="nav-link">Pass Me(10)</a></li>
+                        <li><a href="#" class="nav-link">Job Tracking(3)</a></li>
+                        
+                      
+                    </ul>
+                </div>
+                <!-- Menu End -->
+              
+                
+                
+                <!-- Search form Start -->
+                	<form id="searchForm">
+                    	<div id="search">
+                            <input type="search" name="search" id="searchBox" placeholder="search"/>
+                            <input type="submit" value="" id="searchSubmit" />
+                        </div>
+                    </form>
+                <!-- Search form End -->
+                
+                 <!-- Account info Start -->
+                
+                	<div id="account">
+                    	<div id="accHead">Account</div>
+                        <div id="accImage">
+                        </div>
+                        <div id="moreAcc">
+                        	<ul>
+                            	<li><a href="#">Logout</a></li>
+                                <li><a href="#">Edit Profile</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                
+                <!-- Account info End -->
+            
+            </div>
+            <!-- Navigation End -->
+            
+            
+        </div>
+        <!-- topInner End -->
+    </div>
+    
+    
+    
+    <div id="bottomOuter">
+    
+    	<!-- bottomInner Start -->
+    	<div id="bottomInner">
+        	
+        	<!-- Content Start -->
+        	<div id="content">
+                <!-- <h1 id="main_title">Create Company:</h1> -->
+
+            	<div id="company_pic">
+                	<div id="pic">
+                    </div>
+                    <input type="file" id="comp_picture">
+                </div>
+                <div id='describ'>
+                
+                	<table>
+                    	<tr>
+                        	<td  class="fieldLabel">
+                            	
+                                <label for="com_title">Title:</label>
+                              
+                                
+                            </td>
+                            
+                            <td>
+                            	<input type="text" id="com_title" name="com_title" class="fieldBox">
+                            </td>
+                        </tr>
+                        
+                        <tr>
+                        	<td  class="fieldLabel">
+                            	<label for="com_ind">Industry:</label>
+                            </td>
+                            
+                            <td>
+                            	<input type="text" id="com_ind" name="com_ind" class="fieldBox">
+                            </td>
+                        </tr>
+                        
+                        <tr>
+                        	<td  class="fieldLabel">
+                            	<label for="com_size" >Size:</label>
+                            </td>
+                            
+                            <td>
+                            	<input type="text" id="com_size" name="com_size" class="fieldBox">
+                            </td>
+                        </tr>
+                        
+                        <tr>
+                        	<td class="fieldLabel">
+                            	<label for="com_founded">Founded on:</label>
+                            </td>
+                            
+                            <td>
+                            	<input type="text" id="com_founded" name="com_founded" class="fieldBox dateC">
+                            </td>
+                        </tr>
+                        
+                        <tr>
+                        	<td  class="fieldLabel">
+                            	<label for="com_url">Website:</label>
+                            </td>
+                            
+                            <td>
+                            	<input type="text" id="com_url" name="com_url" class="fieldBox">
+                            </td>
+                        </tr>
+                    </table>
+           
+                </div>
+                <div id="describtion">
+                    	<div class="sectionTitle"><h2>Description:</h2></div>
+                            
+                        <div class="sideRow">
+                            <div class="row1">
+                                <textarea class="editableForm editableAreaForm clear" >Example: Google Inc. is an American multinational public corporation invested in Internet search, cloud computing, and advertising technologies. Google hosts and develops a number of Internet-based services and products, and generates profit primarily from advertising through its AdWords program. The company was founded by Larry Page and Sergey Brin, while the two were attending Stanford University</textarea>
+                            </div>
+                            
+                        </div>
+						<div class="sectionTitle"><h2>Additional Information:</h2></div>
+                            
+                        <div class="sideRow">
+                            <div class="row1">
+                                <textarea class="editableForm editableAreaForm clear" >Example: We focus on being a collaborative, global organization consisting of engineers with the highest levels of technical depth and programming skills. As a Software Engineering intern, you could end up working on our core products and services or those that support critical functions of our engineering operations.</textarea>
+                            </div>
+                            
+                        </div>
+                        
+                		<button type="submit" id='create_comp'>Create Company</button>
+               </div>
+           </div>      
+        </div>
+      </div>  
+        <div id="footer">
+            	About Us | Feedback | History
+        </div>
+        
+    
+</body>
+</html>

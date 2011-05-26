@@ -1,0 +1,107 @@
+@charset "UTF-8";
+/* CSS Document 
+   Made by Cody Coleman
+   IAP 2011
+   for 6.470
+*/
+
+#welcome{
+	position: relative;
+	top: 10px;
+	left: 500px;
+	overflow: hidden;
+	width: auto;	
+}
+
+#hi, #firstNameC, #lastNameC, #yay{
+	color:  rgba(183, 92, 61, 1);
+	font-family:Brush Script MT;
+	font-size: 36px;
+}
+
+#hi{
+	/* opacity: 0;	*/
+	margin-left: 10px;
+	width: auto;
+	overflow: hidden;
+	float: left;
+}
+
+#firstNameC{
+	float: left;
+	margin-left: 10px;
+	
+	
+}
+
+#lastNameC{
+	float: left;
+	margin-left: 10px;
+	
+}
+
+#col1{
+	float: left;
+	width: 450px;
+	margin-right: 25px;
+	overflow: hidden;
+	text-align: center;
+	
+}
+
+#col2{
+	width: 450px;
+	margin-left: 25px;
+	overflow: hidden;
+	
+	
+}
+
+#vidDes{
+	
+}
+
+#des{
+	
+}
+
+#signUp{
+	margin: auto;
+}
+
+.fieldLabel{
+	font-size: 18px;
+	text-align:right;	
+}
+
+.fieldBox{
+	height: 27px;
+	width: 200px;
+}
+
+#signUpSubmit{
+	border: none;
+	background-color: rgba(183, 92, 61, 1);
+	color: #fff;
+	height: 27px;
+	text-align: center;
+	width: 75px;
+	font-size: 18px;
+}
+
+#signUp h2, #signUp h3{
+	color: rgba(183, 92, 61, 1);
+	padding: 2px;
+	margin: 0px;
+}
+
+.sub{
+	text-align: right;	
+}
+
+
+/* validate */
+
+label {
+  	display: block;
+	}

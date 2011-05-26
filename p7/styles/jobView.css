@@ -1,0 +1,148 @@
+@charset "UTF-8";
+/* CSS Document */
+
+#content{
+	overflow: hidden;
+	font-size: 14px;
+	font-family: Arial, Helvetica, sans-serif;	
+}
+
+#top{
+	position: relative;
+	width: auto;
+	height: auto;
+	padding: 0px;
+	margin: 0px;
+	margin: auto;
+	padding-bottom: 10px; 
+	overflow: hidden;
+	border-bottom: solid 1px  rgba(183, 92, 61, 1);
+	
+}
+
+#leftOpt{
+	position: relative;
+	width: 180px;
+	margin: 0px;
+	padding: 0px;
+	float: left;
+	height: auto;
+	margin-left: 20px;
+	margin-right: 10px;
+	border-right: solid 1px rgba(183, 92, 61, 1);
+	margin-top: 20px;
+}
+
+
+#centerOpt{
+	position: relative;
+	width: 730px;
+	margin: 0px;
+	padding: 0px;
+	margin-left: 220px;
+	margin-top: 20px;
+}
+
+
+#apply{
+	width: 155px;
+	color: #fff;
+	font-size: 20px;
+	height: 30px;
+	border: none;
+	margin-top: 10px;
+	background-color: rgba(183, 92, 61, 1);
+	text-align: center;
+	cursor: pointer;
+	
+}
+
+#centerOpt h2{
+	padding: 0px;
+	margin: 0px;
+	font-size: 24px;
+	color:  rgba(183, 92, 61, 1);	
+	font-weight: 100;
+	padding-bottom: 10px; 
+}
+
+
+
+.sideRow{
+	padding-bottom: 10px;
+	text-align: left;	
+}
+
+.row1{
+	margin-left: 5%;	
+}
+
+
+
+.req, .bene, .plus{
+	width: auto;
+	
+	margin-left: 5%;
+	min-height: 14px;
+}
+
+.smallHandle{
+	position: relative;
+	width: 16px;
+	overflow: hidden;
+	float: left;
+	height: 17px;
+	padding: 0px;
+	margin: 0px;
+}
+
+.entry{
+	margin-bottom: 0px;	
+}
+
+.entry .editableAreaForm{
+	margin: 0px;
+	width: 90%;	
+}
+
+
+.req .close, .bene .close, .plus .close{
+	float: left;
+	overflow: hidden;	
+	position: absolute;
+	background-image: url(../jquery-ui-1.8.7.custom/css/ui-lightness/images/ui-icons_ef8c08_256x240.png);
+    height: 16px;
+    width: 16px;
+	margin-right: 4px;
+	cursor: pointer;
+	padding-bottom: 4px;
+	background-position: -80px -128px;
+
+}
+
+.label{
+	color:  rgba(183, 92, 61, 1);
+	width: 100%;
+	font-size: 14px;
+}
+
+
+.leftInfo{
+	width: 100%;
+	font-size: 18px;
+}
+
+#star{
+	
+	overflow: hidden;	
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	background-image: url(../jquery-ui-1.8.7.custom/css/ui-lightness/images/ui-icons_ef8c08_256x240.png);
+	background-position: -224px -112px;
+    height: 16px;
+    width: 16px;
+	cursor: pointer;
+	padding-bottom: 4px;
+	
+}

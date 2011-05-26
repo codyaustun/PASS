@@ -1,0 +1,23 @@
+@charset "utf-8";
+/* CSS Document */
+
+#ontent{
+	height:auto;
+	width:800px;
+}
+#pass_pic{
+	background:url(p5/Images/Banner1Final.jpg);
+	height:300px;
+	width:575px;
+}
+#title{
+	color:#b75c3d;
+	margin-left:350px;
+
+}
+#description{
+	margin-left:585px;
+	width:215px;
+	margin-top:-300px;
+	text-align:justify;
+}

@@ -1,0 +1,504 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>PASS - Job Hunting Made Simple</title>
+    <link href="images/favicon.ico" rel="shortcut icon"  />
+    <link href="images/favicon.ico" rel="icon" type="image/x-icon" />
+    
+    <link rel="stylesheet" href="jquery-ui-1.8.7.custom/css/ui-lightness/jquery-ui-1.8.7.custom.css" />
+    <link rel="stylesheet" href="styles/baseThin.css" />
+    <link rel="stylesheet" href="styles/jobPost.css" />
+    
+    <script type="text/javascript" src="scripts/jquery-1.4.4.min.js"></script>
+    <script type="text/javascript" src="jquery-ui-1.8.7.custom/js/jquery-ui-1.8.7.custom.min.js"></script>
+    <script type="text/javascript" src="scripts/feedback.js"></script>
+    <script type="text/javascript" src="scripts/growl.js"></script>
+    <script type="text/javascript" src="scripts/jobPost.js"></script>
+
+
+</head>
+<body>
+    <div id="growl">
+        </div>
+    <div id="feedback">
+         <h3>Feedback</h3>
+        </div>
+    <div id="topOuter">
+         <!-- topInner Start -->
+         <div id="topInner">
+        
+             <!-- Header Start -->
+             <div id="header">
+                    
+             </div>
+            
+            <!-- Header End -->
+            
+            
+            <!-- Navigation Start -->
+            <div id="nav">
+            
+             <!-- Menu Start -->
+                <div id="links">
+                    <ul>
+                        <li><a href="dashboard.php" class="nav-link navCurrent">Home</a></li>
+                        <li><a href="#" class="nav-link">Pass Me(10)</a></li>
+                        <li><a href="#" class="nav-link">Job Tracking(3)</a></li>
+                        
+                      
+                    </ul>
+                </div>
+                <!-- Menu End -->
+              
+                
+                
+                <!-- Search form Start -->
+                 <form id="searchForm">
+                     <div id="search">
+                            <input type="text" name="search" id="searchBox" class="clear" value="Search"/>
+                            <input type="submit" value="" id="searchSubmit" />
+                        </div>
+                    </form>
+                <!-- Search form End -->
+                
+                <!-- Account info Start -->
+                
+                	<div id="account">
+                    	<div id="accHead">Account</div>
+                        <div id="accImage">
+                        </div>
+                        <div id="moreAcc">
+                        	<ul>
+                            	<li><a href="#">Logout</a></li>
+                                <li><a href="#">Edit Profile</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                
+                <!-- Account info End -->
+                
+            
+            </div>
+            <!-- Navigation End -->
+            
+            
+        </div>
+        <!-- topInner End -->
+    </div>
+    
+    
+    
+    <div id="bottomOuter">
+    
+         <!-- bottomInner Start -->
+         <div id="bottomInner">
+        
+             <!-- Content Start -->
+             <div id="content">
+             	
+                <!-- top Start -->
+             	<div id="top" data-i="3">
+                	
+                    <!--Company start selection start-->
+                            <div class="compSelect">
+                                <div class="containSelect">
+                                    <div class="individual">
+                                        <div class="indPic">
+                                        </div>
+                                        <label>
+                                            <input id="individual" name="employer" type="radio" value="individual"/>
+                                            <span>Individual</span>
+                                        </label>
+                                    </div>
+                                    
+                                    <div class="company">
+                                        <div class="compPic">
+                                        </div>
+                                        <label>
+                                            <input id="company" name="employer" type="radio" value="company"/>
+                                                <span>Company</span>
+                                        </label> 
+                                    </div>
+                    			</div>
+                			</div>                        
+							<!--Company start selection end-->
+                
+                </div>
+                <!-- top End -->
+                
+                <!-- leftOpt Start -->
+                <div id="leftOpt">
+                	<form id="contactForm">
+                                
+                              
+                                <label for="position">Position</label>
+                                <input id="postition" type="text" />
+                                <label for="type_job">Type</label>
+                                <select name="Type">
+                                    <option value="select">Select</option>
+                                    <option value="Full-Time">Full-Time</option>
+                                    <option value="Internship">Internship</option>
+                                    <option value="Part-Time">Part-Time</option>
+                                </select>
+                                <label for="city">City</label>
+                                <input id="city" type="text">
+                                <label for="state">State</label>
+                  
+                                <select id="state" name"state" type="text">
+	                              	<option value="AL">AL</option>
+                                    <option value="AZ">AZ</option>
+                                    <option value="AR">AR</option>
+                                    <option value="CA">CA</option>
+                                    <option value="CO">CO</option>
+                                    <option value="CT">CT</option>
+                                    <option value="DE">DE</option>
+                                    <option value="DC">DC</option>
+									<option value="FM">FM</option>
+                                    <option value="FL">FL</option>
+                                    <option value="GA">GA</option>
+                                    <option value="GU">HI</option>
+                                    <option value="HI">HI</option>
+                                    <option value="ID">ID</option>
+                                    <option value="IL">IL</option>
+                                    <option value="IN">IN</option>
+                                    <option value="IA">IA</option>
+                                    <option value="KS">KS</option>
+                                    <option value="KY">KY</option>
+                                    <option value="LA">LA</option>
+                                    <option value="ME">ME</option>
+                                    <option value="MH">MH</option>
+                                    <option value="MD">MD</option>
+                                    <option value="MA">MA</option>
+                                    <option value="MI">MI</option>
+                                    <option value="MN">MN</option>
+                                    <option value="MS">MS</option>
+                                    <option value="MO">MO</option>
+                                    <option value="MT">MT</option>
+                                    <option value="NE">NE</option>
+                                    <option value="NV">NV</option>
+                                    <option value="NH">NH</option>
+                                    <option value="NJ">NJ</option>
+                                    <option value="NM">NM</option>
+                                    <option value="NY">NY</option>
+                                    <option value="NC">NC</option>
+                                    <option value="ND">ND</option>
+                                    <option value="OH">OH</option>
+                                	<option value="OK">OK</option>
+                                    <option value="OR">OR</option>
+                                    <option value="PA">PA</option>
+                                    <option value="RI">RI</option>
+                                    <option value="SC">SC</option>
+                                    <option value="TN">TN</option>
+                                    <option value="TX">TX</option>
+                                    <option value="UT">UT</option>
+                                    <option value="VT">VT</option>
+                                    <option value="VA">VA</option>
+                                    <option value="WA">WA</option>
+                                    <option value="WV">WV</option>
+                                    <option value="WI">WI</option>
+                                    <option value="WY">WY</option>
+                                </select>
+                                <label for="start_date">Start</label>
+                                <input id="start_date" class="date">
+                                <label for="end_date">End</label>
+                                <input id="end_date" class="date">
+                                <label for="pay">Pay</label>
+                                <select id="pay" type="text">
+                                	<option value="0-$20,000">0-$20,000</option>
+                                    <option value="$20,000-$40,000">$20,000-$40,000</option>
+                                    <option value="$40,000-$60,000">$40,000-$60,000</option>
+                                    <option value="$60,000-$80,000">$60,000-$80,000</option>
+                                    <option value="$80,000-$100,000">$80,000-$100,000</option>
+                                    <option value="$100,000-$150,000">$100,000-$150,000</option>
+                                    <option value="$150,000+">$150,000</option>
+                                </select>
+                                <label for="deadline">Deadline</label>
+                                <input id="deadline" name="deadline" class="date" />
+                                <input id="jobSubmit" type="submit" value="Create Job" />
+                     </form>
+                </div>
+                <!-- leftOpt End -->
+                
+                <!-- centerOpt Start -->
+                <div id="centerOpt">
+                	
+                    	<!-- description Start -->
+                        <div>
+                        
+                            <div class="sectionTitle"><h2>Description:</h2></div>
+                            
+                            <div class="desArea sideRow">
+                                <div class="row1">
+                                    <textarea class="editableForm editableAreaForm clear" >Example: As a Program Manager intern, you'll get to help drive the technical vision, design and implementation of next-generation software solutions. You'll transform the product vision into elegant designs that will ultimately turn into products used by Microsoft customers. The PM intern helps manage feature sets throughout the product lifecycle, and you'll have the chance to see your design through to completion. You'll also work directly with other key team members including Software Development Engineers and Software Development Engineers in Test. Program Managers are advocates for end-users, so your passion for anticipating customer needs and creating outside-the-box solutions for them will really help you shine in this role. </textarea>
+                                </div>
+                                
+                                <div class="controls">
+                                
+                                </div>
+                            </div>
+                        </div>
+                        <!-- description End -->
+                        
+                        <!-- Hours Start -->
+                        <h2>Hours:</h2>
+                        
+                          <!-- sideRow Start -->
+                    <div class="sideRow connectEx">
+                    
+                        	<div class="handle">
+                                <div class="close">
+                                </div>
+                            </div>
+                                
+                                    <span id='hours2'>
+                          	    	    <input type="button" id='fix_hours' name="hours" value="Fixed" /> 
+										<input type="button" id='fix_hours2' name="hours" value="Flexiable" />  <br/>
+                                    </span>
+                   
+                    </div>
+                    <!-- sideRow End -->
+                   
+                
+                    <!--Time slot start-->
+                     <div id="selectopt1" style="display:none;">
+                        <input type="button" id='simptime' name="simptime" value="Simple Timeslot" />
+                        <input type="button" id='advtime' name="advtime" value="Advanced Timeslot" />  <br/> <br/>
+                                        
+                    </div> 
+                    <div id="cal" style = "display:none;">
+                                             
+                        <table border="1" bordercolor="#CCCCCC">
+                        <tr>
+                        <td>        </td>
+                        <td>Monday-Friday</td>
+                        </tr>
+                        <tr>
+                        <td>Start Time:</td>
+                        <td><input type='number' id="select1" placeholder="9">
+                                <select name="Time_shift" class="select2">
+                                        <option value="time_sel2">Select</option>
+            
+                                        <option value="time_yes">AM</option>
+                                        <option value="time_no">PM</option>
+                                    </select></td>
+                       
+                        </tr>
+                        <tr>
+                         <td>End Time:</td>
+                        <td><input type='number' id="select3" placeholder="5">
+                                <select name="Time_shift" class="select4">
+                                        <option value="time_sel2">Select</option>
+            
+                                        <option value="time_yes">AM</option>
+                                        <option value="time_no">PM</option>
+                                    </select></td>
+                                            </tr>
+                        </table>
+                                     
+                       </div>
+                        <div id="selectopt2" style="display:none;">
+                                                     
+                                <table border="1" bordercolor="#CCCCCC" width="40px">
+                                <tr>
+                                <td>        </td>
+                                <td>Monday</td>
+                                <td>Tuesday</td>
+                                <td>Wednesday</td>
+                                <td>Thursday</td>
+                                <td>Friday</td>
+                                <td>Saturday</td>
+                                <td>Sunday</td>
+                                </tr>
+                                <tr>
+                                <td>Start Time:</td>
+                                <td width="30px"><input type='number' class="selects" placeholder="9" width:"30px;">
+                                <select name="Time_shift" class="select2">
+                                        <option value="time_sel2">Select</option>
+            
+                                        <option value="time_yes">AM</option>
+                                        <option value="time_no">PM</option>
+                                    </select></td>
+                       
+                               <td><input type='number' class="selects" placeholder="9">
+                                <select name="Time_shift" class="select2">
+                                        <option value="time_sel2">Select</option>
+            
+                                        <option value="time_yes">AM</option>
+                                        <option value="time_no">PM</option>
+                                    </select></td>
+                                    <td><input type='number' class="selects" placeholder="9">
+                                <select name="Time_shift" class="select2">
+                                        <option value="time_sel2">Select</option>
+            
+                                                <option value="time_yes">AM</option>
+                                                <option value="time_no">PM</option>
+                                            </select></td>
+                                        <td><input type='number' class="selects" placeholder="9">
+                                                 <select name="Time_shift" class="select2">
+                                                <option value="time_sel2">Select</option>
+            
+                                                <option value="time_yes">AM</option>
+                                                <option value="time_no">PM</option>
+                                                </select></td>
+                                               <td><input type='number' class="selects" placeholder="9">
+                                                    <select name="Time_shift" class="select2">
+                                                        <option value="time_sel2">Select</option>
+                            
+                                                        <option value="time_yes">AM</option>
+                                                        <option value="time_no">PM</option>
+                                                    </select>
+                                               </td>
+                       
+                                            <td><input type='number' class="selects" placeholder="9">
+                                                <select name="Time_shift" class="select2">
+                                                    <option value="time_sel2">Select</option>
+                        
+                                                    <option value="time_yes">AM</option>
+                                                    <option value="time_no">PM</option>
+                                                </select>
+                                            </td>
+                                            
+                                            <td><input type='number' class="selects" placeholder="9">
+                                                <select name="Time_shift" class="select2">
+                                                    <option value="time_sel2">Select</option>
+                        
+                                                    <option value="time_yes">AM</option>
+                                                    <option value="time_no">PM</option>
+                                                </select>
+                                            </td>
+                                </tr>
+                                <tr>
+                                 <td>End Time:</td>
+                                <td>
+                                    <input type='number' class="selecte" placeholder="9">
+                                        <select name="Time_shift" class="select2">
+                                            <option value="time_sel2">Select</option>
+                                            <option value="time_yes">AM</option>
+                                            <option value="time_no">PM</option>
+                                        </select>
+                                </td>
+                       
+                               <td>
+                                    <input type='number' class="selecte" placeholder="9">
+                                        <select name="Time_shift" class="select2">
+                                            <option value="time_sel2">Select</option>
+                                            <option value="time_yes">AM</option>
+                                            <option value="time_no">PM</option>
+                                        </select>
+                              </td>
+                              <td>
+                                    <input type='number' class="selecte" placeholder="9">
+                                        <select name="Time_shift" class="select2">
+                                            <option value="time_sel2">Select</option>
+                                            <option value="time_yes">AM</option>
+                                            <option value="time_no">PM</option>
+                                        </select></td>
+                              <td> 
+                                    <input type='number' class="selecte" placeholder="9">
+                                       <select name="Time_shift" class="select2">
+                                            <option value="time_sel2">Select</option>
+                                            <option value="time_yes">AM</option>
+                                            <option value="time_no">PM</option>
+                                       </select>
+                              </td>
+                              <td>
+                                    <input type='number' class="selecte" placeholder="9">
+                                        <select name="Time_shift" class="select2">
+                                            <option value="time_sel2">Select</option>
+                                            <option value="time_yes">AM</option>
+                                            <option value="time_no">PM</option>
+                                        </select>
+                                 </td>
+                                     <td>
+                                        <input type='number' class="selecte" placeholder="9">
+                                                   <select name="Time_shift" class="select2">
+                                                        <option value="time_sel2">Select</option>
+                                                        <option value="time_yes">AM</option>
+                                                        <option value="time_no">PM</option>
+                                                    </select>
+                                    
+                                    </td>
+                                    <td>
+                                        <input type='number' class="selecte" placeholder="9">
+                                                   <select name="Time_shift" class="select2">
+                                                        <option value="time_sel2">Select</option>
+                                                        <option value="time_yes">AM</option>
+                                                        <option value="time_no">PM</option>
+                                                    </select>
+                                    
+                                    </td>
+                                </tr> 
+                            </table>
+                        </div>  
+                            <!-- Hours End -->
+                            
+                        
+                        
+                        <!-- Requirements Start -->
+                        <h2>Requirements:</h2>
+                        
+                        <div class="reqArea sideRow">
+                        	<div class="req entry sample" data-t="requirements" data-i="">
+                        		<div class="smallHandle">
+                                    <div class="close">
+                                    </div>
+                                </div>
+                                <textarea name="info" class="editableForm editableAreaForm clear" >Example: 1-2 years experience programming in C++, Java, or other computer programming languages preferred</textarea>
+      
+                        	</div>
+                        </div>
+                        <!-- Requirement End -->
+                        
+                        
+                        <!-- Pluses Start -->
+                        <h2>Preferred:</h2>
+                        
+                        <div class="plusArea sideRow">
+                        	<div class="plus entry sample" data-t="pluses" data-i="">
+                        		<div class="smallHandle">
+                                    <div class="close">
+                                    </div>
+                                </div>
+                                <textarea name="info" class="editableForm editableAreaForm clear" >Example: Familiarity with managing complex project schedules, solving complex problems, and nurturing cross-group collaboration</textarea>
+      
+                        	</div>
+                        </div>
+                        <!-- Pluses End -->
+                        
+                        
+                        <!-- Benefits Start -->
+                        <h2>Benefit:</h2>
+                        
+                       <div class="beneArea sideRow">
+                        	<div class="bene entry sample" data-t="benefits" data-i="">
+                        		<div class="smallHandle">
+                                    <div class="close">
+                                    </div>
+                                </div>
+                                <textarea name="info" class="editableForm editableAreaForm clear" >Example: Subsidized car rental or bike purchase plan</textarea>
+      
+                        	</div>
+                        </div>
+                        <!-- Benefits End -->
+                        
+                   
+                </div>
+                <!-- centerOpt End -->
+             
+            </div>
+            <!-- Content End -->
+            
+            
+    	</div>
+    
+    </div>
+    
+    <div id="footer">
+         Footer!
+    </div>
+        
+   
+</body>
+</html>
